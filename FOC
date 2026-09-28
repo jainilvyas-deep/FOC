@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+        }
+
+        /* Header */
+        header {
+            background: #1e3a8a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Navigation */
+        nav {
+            background: #172554;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        /* Main Container */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 30px auto;
+        }
+
+        .welcome {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .welcome h2 {
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 28px;
+            font-weight: bold;
+            color: #1e3a8a;
+        }
+
+        /* Sections */
+        .section {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            color: #1e3a8a;
+            margin-bottom: 20px;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background: #1e3a8a;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f9fafb;
+        }
+
+        /* Notices */
+        .notice {
+            padding: 15px;
+            background: #eff6ff;
+            border-left: 5px solid #2563eb;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: #172554;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 10px;
+            }
+
+            .container {
+                width: 95%;
+            }
+
+            table {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Student Portal</h1>
+        <p>Welcome to the Student Management System</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#profile">Profile</a>
+        <a href="#courses">Courses</a>
+        <a href="#attendance">Attendance</a>
+        <a href="#results">Results</a>
+        <a href="#notices">Notices</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- Welcome -->
+        <div class="welcome" id="dashboard">
+            <h2>Welcome, Rahul!</h2>
+            <p>Here is your student dashboard.</p>
+        </div>
+
+        <!-- Dashboard Cards -->
+        <div class="cards">
+
+            <div class="card">
+                <h3>Attendance</h3>
+                <p>85%</p>
+            </div>
+
+            <div class="card">
+                <h3>Courses</h3>
+                <p>6</p>
+            </div>
+
+            <div class="card">
+                <h3>CGPA</h3>
+                <p>8.5</p>
+            </div>
+
+            <div class="card">
+                <h3>Pending Fees</h3>
+                <p>₹5,000</p>
+            </div>
+
+        </div>
+
+        <!-- Profile -->
+        <div class="section" id="profile">
+            <h2>Student Profile</h2>
+
+            <table>
+                <tr>
+                    <th>Student ID</th>
+                    <td>STU2026001</td>
+                </tr>
+                <tr>
+                    <th>Name</th>
+                    <td>Rahul Sharma</td>
+                </tr>
+                <tr>
+                    <th>Course</th>
+                    <td>Bachelor of Computer Applications</td>
+                </tr>
+                <tr>
+                    <th>Semester</th>
+                    <td>3rd Semester</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>rahul@example.com</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Courses -->
+        <div class="section" id="courses">
+            <h2>My Courses</h2>
+
+            <table>
+                <tr>
+                    <th>Code</th>
+                    <th>Subject</th>
+                    <th>Faculty</th>
+                </tr>
+                <tr>
+                    <td>CS301</td>
+                    <td>Web Development</td>
+                    <td>Mr. Kumar</td>
+                </tr>
+                <tr>
+                    <td>CS302</td>
+                    <td>Database Management</td>
+                    <td>Ms. Priya</td>
+                </tr>
+                <tr>
+                    <td>CS303</td>
+                    <td>Java Programming</td>
+                    <td>Mr. Singh</td>
+                </tr>
+                <tr>
+                    <td>CS304</td>
+                    <td>Computer Networks</td>
+                    <td>Dr. Patel</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Attendance -->
+        <div class="section" id="attendance">
+            <h2>Attendance</h2>
+
+            <table>
+                <tr>
+                    <th>Subject</th>
+                    <th>Total Classes</th>
+                    <th>Present</th>
+                    <th>Attendance</th>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td>40</td>
+                    <td>36</td>
+                    <td>90%</td>
+                </tr>
+                <tr>
+                    <td>Database Management</td>
+                    <td>40</td>
+                    <td>34</td>
+                    <td>85%</td>
+                </tr>
+                <tr>
+                    <td>Java Programming</td>
+                    <td>40</td>
+                    <td>32</td>
+                    <td>80%</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Results -->
+        <div class="section" id="results">
+            <h2>Results</h2>
+
+            <table>
+                <tr>
+                    <th>Subject</th>
+                    <th>Marks</th>
+                    <th>Grade</th>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td>88/100</td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <td>Database Management</td>
+                    <td>82/100</td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <td>Java Programming</td>
+                    <td>90/100</td>
+                    <td>A+</td>
+                </tr>
+                <tr>
+                    <td>Computer Networks</td>
+                    <td>76/100</td>
+                    <td>B+</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Notices -->
+        <div class="section" id="notices">
+            <h2>Latest Notices</h2>
+
+            <div class="notice">
+                <strong>Exam Notice:</strong>
+                Semester examinations will begin from 15 October 2026.
+            </div>
+
+            <div class="notice">
+                <strong>Assignment:</strong>
+                Web Development assignment must be submitted by 5 October 2026.
+            </div>
+
+            <div class="notice">
+                <strong>Holiday:</strong>
+                The college will remain closed on 2 October 2026.
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Student Portal. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
